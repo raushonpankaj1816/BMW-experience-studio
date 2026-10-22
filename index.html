@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW Experience Studio — Home</title>
+  <meta name="description" content="A premium BMW website concept: model discovery, innovation, gallery, heritage timeline, comparison, company origin and ownership — plus test drive booking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="BMW home">
+      <span class="brand-mark" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </span>
+      <span class="brand-text">BMW</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="models.html">Models</a>
+      <a href="innovation.html">Innovation</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="models.html#compare">Compare</a>
+      <a href="#drive">Book Drive</a>
+    </nav>
+
+    <button class="menu-button" type="button" data-menu-button aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- ── Hero ─────────────────────────────────────────── -->
+    <section class="hero" aria-label="BMW electric performance">
+      <video class="hero-media" autoplay muted loop playsinline preload="metadata" poster="image/BMWi7_xDrive60_1X7A7269.jpg" aria-hidden="true">
+        <source src="video/BMWlogo.mp4" type="video/mp4">
+      </video>
+      <div class="hero-scrim"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">BMW Experience Studio</p>
+        <h1>BMW</h1>
+        <p class="hero-copy">Electric luxury, M performance, and intelligent mobility brought together in one immersive showroom.</p>
+      </div>
+
+      <aside class="hero-actions hero-cta" aria-label="Explore BMW or book a drive">
+        <a class="button primary" href="models.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          Explore Models
+        </a>
+        <a class="button secondary" href="#drive">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7m0 0H9m8 0v8"/></svg>
+          Book a Drive
+        </a>
+      </aside>
+    </section>
+
+    <!-- ── Quick tools ──────────────────────────────────── -->
+    <section class="quick-tools" aria-label="BMW quick tools">
+      <form class="finder" data-finder data-redirect="models">
+        <label for="model-search">Find your BMW</label>
+        <div class="finder-row">
+          <input id="model-search" type="search" name="search" placeholder="Search i7, M, SUV, electric, classic..." autocomplete="off">
+          <button type="submit" aria-label="Search models">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.8-4.8M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z"/></svg>
+          </button>
+        </div>
+      </form>
+
+      <div class="tool-stat">
+        <span data-stat-models>—</span>
+        <p>BMW models in the interactive catalogue</p>
+      </div>
+      <div class="tool-stat accent">
+        <span data-stat-heritage>—</span>
+        <p>Milestones on the heritage timeline</p>
+      </div>
+      <div class="tool-stat">
+        <span data-stat-images>—</span>
+        <p>Photographs from your local collection</p>
+      </div>
+    </section>
+
+    <!-- ── About: origin & ownership ────────────────────── -->
+    <section class="page-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">Origin &amp; Ownership</p>
+        <h2>Bayerische Motoren Werke.</h2>
+        <p class="section-sub">Who BMW is, where it came from, and who owns it today.</p>
+      </div>
+
+      <div class="about-grid" style="margin-top: clamp(28px, 5vw, 54px);">
+        <div class="about-visual">
+          <figure class="about-photo">
+            <img src="image/BMW_340_1950.jpg" alt="BMW 340 from 1950, part of BMW's post-war history" loading="lazy" decoding="async">
+            <figcaption>BMW 340 · a post-war chapter, 1950</figcaption>
+          </figure>
+          <div class="about-copy">
+            <p>BMW began as an aircraft-engine builder in Munich, became a motorcycle manufacturer in 1923, and only started building cars in 1928 with the licensed Dixi. Today the BMW Group builds vehicles on three continents and sells them in more than 140 countries.</p>
+            <p>It remains an <strong>independent, publicly listed company</strong> — not owned by any other carmaker. Its headquarters is the four-cylinder BMW Tower designed by Karl Schwanzer, opened in 1973 beside the Olympiapark in Munich.</p>
+          </div>
+        </div>
+        <ul class="about-facts" data-about-facts>
+          <!-- Rendered from js/catalog.js -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── BMW Group story ──────────────────────────────── -->
+    <section class="page-section dark" id="group-story">
+      <div class="section-heading">
+        <p class="eyebrow" style="color:#5be0c8">The BMW Group</p>
+        <h2>One group. Many ways forward.</h2>
+        <p class="section-sub">A global company shaped by engineering, a family of distinct brands, and more than a century of movement.</p>
+      </div>
+
+      <div class="group-stats" data-about-stats></div>
+      <ul class="brand-list" data-brand-list>
+        <!-- Rendered from js/catalog.js -->
+      </ul>
+    </section>
+
+    <!-- ── Book a drive ─────────────────────────────────── -->
+    <section class="drive" id="drive">
+      <video class="drive-video" autoplay muted loop playsinline preload="metadata" poster="image/BMW_XM_(G09)_DSC_8506.jpg" aria-hidden="true">
+        <source src="video/book drive.mp4" type="video/mp4">
+      </video>
+      <div class="drive-copy">
+        <p class="eyebrow">Book a Test Drive</p>
+        <h2>Your BMW moment starts here.</h2>
+        <p>Choose a model, share your details, and step into a drive experience built around your preferred pace.</p>
+
+        <ol class="drive-steps">
+          <li>
+            <b>1</b>
+            <div>
+              <strong>Pick the car</strong>
+              <p>Select any model from the catalogue — every spec sheet has a “Book a test drive” link straight to this form.</p>
+            </div>
+          </li>
+          <li>
+            <b>2</b>
+            <div>
+              <strong>Choose date, time and location</strong>
+              <p>Morning, afternoon or evening — at the retailer city closest to you.</p>
+            </div>
+          </li>
+          <li>
+            <b>3</b>
+            <div>
+              <strong>Drive it</strong>
+              <p>Bring a valid licence. A BMW consultant walks you through the car, then hands you the keys.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="drive-contact">
+          <span>Prefer to talk first?</span>
+          <a href="https://www.bmwgroup.com/en/general/contact.html" target="_blank" rel="noopener">Contact BMW Group</a>
+          <span>or</span>
+          <a href="https://www.bmw.com" target="_blank" rel="noopener">Find your local BMW retailer</a>
+        </div>
+      </div>
+
+      <form class="drive-form" data-drive-form novalidate>
+        <div class="form-grid">
+          <div class="form-row three">
+            <label>
+              First name
+              <input type="text" name="firstName" placeholder="First name" autocomplete="given-name" minlength="1" maxlength="40" required>
+            </label>
+            <label>
+              Middle name <span>(optional)</span>
+              <input type="text" name="middleName" placeholder="Middle name" autocomplete="additional-name" maxlength="40">
+            </label>
+            <label>
+              Last name
+              <input type="text" name="lastName" placeholder="Last name" autocomplete="family-name" minlength="1" maxlength="40" required>
+            </label>
+          </div>
+
+          <div class="form-row two">
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@example.com" autocomplete="email" maxlength="120" required>
+            </label>
+            <label>
+              Phone
+              <span class="phone-input">
+                <select name="phoneCountryCode" aria-label="Phone country calling code" autocomplete="tel-country-code" required>
+                  <option value="">Code</option>
+                  <option value="+1">+1 · US / CA</option>
+                  <option value="+33">+33 · France</option>
+                  <option value="+44">+44 · UK</option>
+                  <option value="+49">+49 · Germany</option>
+                  <option value="+61">+61 · Australia</option>
+                  <option value="+81">+81 · Japan</option>
+                  <option value="+86">+86 · China</option>
+                  <option value="+91">+91 · India</option>
+                  <option value="+971">+971 · UAE</option>
+                  <option value="+65">+65 · Singapore</option>
+                  <option value="+55">+55 · Brazil</option>
+                  <option value="+27">+27 · South Africa</option>
+                </select>
+                <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel-national" minlength="7" maxlength="20" required>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-row two">
+            <label>
+              Gender <span>(optional)</span>
+              <select name="gender">
+                <option value="">Prefer not to say</option>
+                <option>Woman</option>
+                <option>Man</option>
+                <option>Non-binary</option>
+              </select>
+            </label>
+            <label>
+              Preferred contact method
+              <select name="preferredContact">
+                <option value="">No preference</option>
+                <option>Email</option>
+                <option>Phone</option>
+                <option>WhatsApp</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row three">
+            <label>
+              Model
+              <select name="model" required>
+                <option value="">Select model</option>
+                <!-- Options rendered from js/catalog.js -->
+              </select>
+            </label>
+            <label>
+              Date
+              <input type="date" name="date" required>
+            </label>
+            <label>
+              Preferred time
+              <select name="time">
+                <option value="">No preference</option>
+                <option>Morning · 09:00 – 12:00</option>
+                <option>Afternoon · 12:00 – 17:00</option>
+                <option>Evening · 17:00 – 20:00</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row two">
+            <label>
+              Retailer location
+              <select name="city" required>
+                <option value="">Select location</option>
+                <option>Munich</option>
+                <option>Berlin</option>
+                <option>Hamburg</option>
+                <option>Frankfurt</option>
+                <option>London</option>
+                <option>Manchester</option>
+                <option>Paris</option>
+                <option>Dubai</option>
+                <option>Abu Dhabi</option>
+                <option>New York</option>
+                <option>Los Angeles</option>
+                <option>Toronto</option>
+                <option>Singapore</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Bengaluru</option>
+                <option>Sydney</option>
+                <option>Melbourne</option>
+                <option>Tokyo</option>
+                <option>Shanghai</option>
+                <option>Beijing</option>
+              </select>
+            </label>
+            <label>
+              Current vehicle <span>(optional)</span>
+              <input type="text" name="vehicle" placeholder="e.g. BMW 3 Series, 2019" maxlength="60">
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label class="form-message">
+              Anything else we should know? <span>(optional)</span>
+              <textarea name="message" placeholder="Tell us what you would like to experience on your drive." maxlength="500" rows="3"></textarea>
+            </label>
+          </div>
+        </div>
+
+        <button class="button primary" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          Request Drive
+        </button>
+        <p class="form-status" data-form-status aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="BMW home">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </span>
+          <span class="brand-text">BMW</span>
+        </a>
+        <p>A premium website concept built from your local BMW image collection — model discovery, heritage, innovation and test-drive booking.</p>
+        <p><strong>Bayerische Motoren Werke AG · Munich, Germany · est. 1916</strong></p>
+        <img class="m-logo" src="image/BMW_M_logo.svg" alt="BMW M logo" width="64" height="40" loading="lazy">
+      </div>
+
+      <div class="footer-col">
+        <h4>BMW Group</h4>
+        <ul>
+          <li><a href="#about">Origin &amp; Ownership</a></li>
+          <li><a href="https://www.bmwgroup.com/en/company.html" target="_blank" rel="noopener">Corporate profile</a></li>
+          <li><a href="https://www.bmwgroup.com/en/careers.html" target="_blank" rel="noopener">Careers</a></li>
+          <li><a href="https://www.bmwgroup.com/en/investor-relations.html" target="_blank" rel="noopener">Investor relations</a></li>
+          <li><a href="https://www.bmwgroup.com/en/press.html" target="_blank" rel="noopener">Press &amp; media</a></li>
+          <li><a href="https://www.bmwgroup.com/en/sustainability.html" target="_blank" rel="noopener">Sustainability</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><span>Headquarters</span><strong>BMW AG, Petuelring 130, 80809 Munich, Germany</strong></li>
+          <li><span>Global hotline</span><strong><a href="tel:+49893820">+49 89 382-0</a></strong></li>
+          <li><span>Investor relations</span><strong><a href="mailto:ir@bmwgroup.com">ir@bmwgroup.com</a></strong></li>
+          <li><span>Media enquiries</span><strong><a href="mailto:presse@bmw.de">presse@bmw.de</a></strong></li>
+          <li><span>Customer service</span><strong><a href="https://www.bmwgroup.com/en/general/contact.html" target="_blank" rel="noopener">Online contact form</a></strong></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-social-col">
+        <h4 class="footer-social-heading">Follow BMW worldwide</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/bmw/" target="_blank" rel="noopener" aria-label="BMW on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="https://x.com/BMW" target="_blank" rel="noopener" aria-label="BMW on X (Twitter)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></svg>
+          </a>
+          <a href="https://www.facebook.com/BMW/" target="_blank" rel="noopener" aria-label="BMW on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4h-2.5A3.5 3.5 0 0 0 9 7.5V10H7v3h2v7h3v-7h2.4l.6-3H12V7.8c0-.6.4-1 1-1h2z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/user/BMW" target="_blank" rel="noopener" aria-label="BMW on YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.6l5 2.4-5 2.4z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/bmw-group/" target="_blank" rel="noopener" aria-label="BMW Group on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M7.6 10.4V17M7.6 7.4v.1M11.6 17v-6.6M11.6 13.4c0-1.6 1-2.8 2.6-2.8s2.5 1.2 2.5 2.8V17"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@bmw" target="_blank" rel="noopener" aria-label="BMW on TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v9.6a3.6 3.6 0 1 1-3.6-3.6c.4 0 .8.1 1.1.3"/><path d="M14 6.2A4.8 4.8 0 0 0 18.8 11"/></svg>
+          </a>
+          <a href="https://www.threads.net/@bmw" target="_blank" rel="noopener" aria-label="BMW on Threads">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12c0-1 .5-2 1.5-2.5M16 12c0 1-.5 2-1.5 2.5"/></svg>
+          </a>
+          <a href="https://www.pinterest.com/bmw/" target="_blank" rel="noopener" aria-label="BMW on Pinterest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7c2.5 0 4 1.5 4 3.5s-1 3.5-3 3.5c-.5 0-1-.1-1.5-.3.2-.8.5-1.8.5-2.7 0-1-.5-1.5-1-1.5s-1 .7-1 1.7c0 .6.2 1.1.3 1.6-.8.3-1.8.7-1.8 2.2 0 2 1.5 3 3.5 3"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 BMW Experience Studio — an independent design concept. Not affiliated with or endorsed by BMW AG.</p>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="https://www.bmwgroup.com/en/general/imprint.html" target="_blank" rel="noopener">Imprint</a>
+        <a href="https://www.bmwgroup.com/en/legal-data-protection.html" target="_blank" rel="noopener">Privacy</a>
+        <a href="https://www.bmwgroup.com/en/general/terms-conditions.html" target="_blank" rel="noopener">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/catalog.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
